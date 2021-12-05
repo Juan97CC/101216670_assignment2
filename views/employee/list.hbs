@@ -1,0 +1,29 @@
+
+<h1>Employee list</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email Id</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        {{#each list}}
+        <tr>
+            <td>{{this.firstname}}</td>
+            <td>{{this.lastname}}</td>
+            <td>{{this.emailid}}</td>
+            <td>
+                <button><a href="/employee/{{this._id}}">Edit</a></button>
+                 <button><a href="/employee/delete/{{this._id}}">Delete</a></button>
+            </td>
+        </tr>
+        {{/each}}
+
+        <h6><a class="btn btn-secondary" href="/employee">Add New Employee</a></h6>
+    </tbody>
+
+
+</table>
